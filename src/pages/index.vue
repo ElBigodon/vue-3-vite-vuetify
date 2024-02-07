@@ -16,7 +16,7 @@ meta:
   layout: login
 </route>
 
-<script setup>
+<script setup lang="ts">
 
 const {data: cacheData, attach} = useCache();
 
@@ -28,10 +28,8 @@ onMounted(() => {
 
   attach('id', randomId);
   
-  console.log(persistData.value)
-  
-    define('id', randomId);
   if (!persistData.value['id']) {
+    define('id', Math.random().toString(32));
   }
 
 });

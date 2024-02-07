@@ -6,12 +6,12 @@ export const usePersist = createGlobalState(() => {
 
   const _data = refWithControl(JSON.parse(atob(_encryptData.value)), {
     onChanged(value) {
-      _encryptData.value = btoa(JSON.stringify(value))
-    },
+      _encryptData.value = btoa(JSON.stringify(value));
+    }
   });
 
   const define = (key: string, value: unknown) => {
-    Object.assign(_data.value, {[key]: value});
+    _data.set({ [key]: value });
   }
   
   const has = (key: string) => {
