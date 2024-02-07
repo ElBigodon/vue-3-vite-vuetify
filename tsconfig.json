@@ -6,7 +6,7 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
     
-    "types": ["typed-router.d.ts", "vite-plugin-vue-layouts/client"],
+    "types": ["vite-plugin-vue-layouts/client"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
