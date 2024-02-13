@@ -1,6 +1,6 @@
 <template>
   <v-container class="bg-red h-100 d-flex flex-row justify-space-around">
-    <v-row >
+    <v-row>
       <v-col>
         <main>
           <RouterView />
@@ -17,3 +17,7 @@
     </v-row>
   </v-container>
 </template>
+
+<script setup lang="ts">
+
+</script>

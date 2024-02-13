@@ -11,10 +11,14 @@ export const useCache = createGlobalState(() => {
   const detach = (key: string) => {
     delete _data.value[key];
   }
+
+  const has = (key: string) => key in _data.value;
   
   const drop = () => {
     _data.value = {};
   }
   
-  return { data: readonly(_data), attach, detach, drop };
+  return { data: readonly(_data), attach, detach, drop, has };
 });
+
+export const useSharedCache = createSharedComposable(useCache);
