@@ -20,7 +20,7 @@ for (const file of files) {
 
   const fullPath = join(path, name);
 
-  console.log("Gerando chave (32 bytes) e nonce (16 bytes) no arquivo '%s'", name);
+  console.log("Gerando chave (32 bytes) no arquivo '%s'", name);
     
   const rawFileData = await readFile(fullPath, { encoding: 'utf-8' })
 
@@ -31,8 +31,8 @@ for (const file of files) {
 
   const environmentData = Object.fromEntries(fileData);
 
-  if (Object.keys(environmentData).find((prop) => prop == '_GENERATED_KEY')) {
-    console.log("Arquivo '%s' já possui as chaves geradas. Abortando processo.", name);
+  if (Object.keys(environmentData).includes('_GENERATED_KEY')) {
+    console.log("Arquivo '%s' já possui uma chave gerada. Abortando processo.", name);
     process.exit(0);
   }
 
@@ -47,7 +47,7 @@ for (const file of files) {
 
   await writeFile(fullPath, toEnvFormat);
 
-  console.log('As chaves foram geradas com sucesso, confira o arquivo: %s', fullPath);
+  console.log('As chave foi gerada com sucesso! Confira o arquivo: %s', fullPath);
 
   break;
 }

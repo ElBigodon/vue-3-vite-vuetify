@@ -5,6 +5,6 @@
 
 <script setup lang="ts">
 
-useTitle('Starter Pack V3')
+useTitle('Starter Pack V3');
 
 </script>

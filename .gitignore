@@ -25,6 +25,7 @@ dist-ssr
 *.sw?
 
 *.d.ts
+!src/*.d.ts
 
 .env*
 !.env.example
