@@ -15,7 +15,7 @@ import * as directives from 'vuetify/directives';
 
 // Redefinindo estilização
 import '@unocss/reset/normalize.css';
-// Aplicando estilização dos vuetify para todos componentes, Ex: div, span ...
+// Aplicando estilização dos vuetify para todos componentes, Ex: div, span, section ...
 import 'vuetify/dist/vuetify.min.css';
 // Aplicando font
 import './assets/main.css';

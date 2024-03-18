@@ -25,7 +25,7 @@
               >
                 <template #append-inner>
                   <div @click="toggleFormPassVisible()">
-                    <v-icon>
+                    <v-icon class="cursor-pointer">
                       {{ formPassVisible ? "mdi-eye-off" : "mdi-eye" }}
                     </v-icon>
                   </div>

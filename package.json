@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "bun:dev": "bunx --bun vite",
     "build": "vue-tsc && vite build",
     "build:dev": "vue-tsc && vite build -m development",
     "build:stg": "vue-tsc && vite build -m staging",
