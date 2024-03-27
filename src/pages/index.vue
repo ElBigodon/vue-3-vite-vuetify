@@ -19,7 +19,6 @@
               <v-text-field
                 :type="formPassVisible ? 'text' : 'password'"
                 :loading="formLoading"
-                @click:append-inner="toggleFormPassVisible()"
                 required
                 label="Senha"
               >
